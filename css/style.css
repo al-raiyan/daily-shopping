@@ -2,6 +2,14 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+.site-title {
+  font-weight: 700;
+  font-size: 70px;
+  color: rgba(48, 10, 48, 0.733);
+}
+.shopping {
+  color: rgba(112, 79, 17, 0.747);
+}
 .search-field {
   padding: 5px;
 }
