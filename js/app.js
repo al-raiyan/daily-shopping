@@ -224,10 +224,24 @@ const showProducts = (products) => {
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
       <p>Rating: ${product.rating.rate}</p>
-      <p>: ${product.rating.count}</p>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-dark">add to cart</button>
-      <button id="details-btn" class="btn btn-info">Details</button></div>
+      <p>Rating: ${product.rating.count}</p>
+      <h2>Price: ${product.price}</h2>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-secondary">add to cart</button>
+<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+Details
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">${product.title}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      ${product.description}
+      </div>
+  </div>
+</div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -286,4 +300,5 @@ const updateTotal = () => {
     getInputValue("total-tax");
   document.getElementById("total").innerText = grandTotal;
 };
+
 loadProducts();
