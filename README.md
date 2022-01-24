@@ -1,3 +1,2 @@
-# ranga-store-fix-al-raiyan
-ranga-store-fix-al-raiyan created by GitHub Classroom
-assigenment 7
+Daily Shopping.
+Live Site: https://trusting-lewin-89aa6e.netlify.app/
